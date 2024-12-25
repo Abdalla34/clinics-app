@@ -1,7 +1,7 @@
 <template>
   <div class="Parent">
     <div class="logo-main">
-      <img src="public/Eadaty main logo 3.jpg" alt="" />
+      <img src="public/logo3.jpg" alt="" />
     </div>
     <div class="row g-0">
       <div class="col-lg-6 col-md-6 display">

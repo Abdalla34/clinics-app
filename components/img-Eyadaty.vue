@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="@/public/Eadaty main logo 3.jpg" alt="" class="img-show" />
+    <img src="@/public/logo3.jpg" alt="" class="img-show" />
   </div>
 </template>
 <style scoped>

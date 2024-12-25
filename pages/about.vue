@@ -28,7 +28,7 @@
             <div class="logo-box">
               <img
                 class="img-box"
-                src="@/public/eadaty main logo 3.jpg"
+                src="@/public/logo3.jpg"
                 alt=""
               />
             </div>

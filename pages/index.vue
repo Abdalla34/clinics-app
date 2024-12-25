@@ -6,7 +6,7 @@
           <div class="details-img position-absolute">
             <img
               class="img-logo"
-              src="@/public/Eadaty main logo 2@2x.png"
+              src="@/public/logo2.png"
               alt=""
             />
             <h2 class="text-light">Amazing Platform!</h2>

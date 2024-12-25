@@ -2,7 +2,7 @@
   <div>
     <div class="code text-center" v-if="!OtpValide">
       <div>
-        <img class="img-hand" src="/public/Eadaty main logo 3.jpg" alt="Logo" />
+        <img class="img-hand" src="/public/logo3.jpg" alt="Logo" />
         <h1 class="title">OTP verifiction</h1>
         <p class="font-size text-center">
           We have sent a verification code to email address

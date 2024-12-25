@@ -3,7 +3,7 @@
     <div v-if="!Active">
       <img
         class="img-Created"
-        src="/public/Eadaty main logo 3.jpg"
+        src="/public/logo3.jpg"
         alt="Logo"
       />
       <h1 class="title text-center">Update your password</h1>

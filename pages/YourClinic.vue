@@ -5,7 +5,7 @@
       class="parent d-flex p-3 justify-content-between p-1 align-items-center"
     >
       <div class="logo-clinic">
-        <img class="logo-clinic" src="public/eadaty main logo 3.jpg" alt="" />
+        <img class="logo-clinic" src="public/logo3.jpg" alt="" />
       </div>
       <div class="icons-setting cursor d-flex align-items-center gap-3">
         <div

@@ -5,7 +5,7 @@
   >
     <div class="col-auto">
       <div class="text-center fix">
-        <img v-if="!isEmail" src="/public/Eadaty main logo 3.jpg" alt="Logo" />
+        <img v-if="!isEmail" src="/public/logo3.jpg" alt="Logo" />
         <h1 v-if="!isEmail" class="title">Reset your password</h1>
         <p v-if="!isEmail" class="font-size">
           Enter your email address and we’ll send you password reset
