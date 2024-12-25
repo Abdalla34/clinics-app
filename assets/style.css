@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main--color: #27a376;
+  --secound-color: rgba(160, 174, 192, 0.4);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.color-main {
+  color: #27a376;
+}
+.secound-color {
+  color: rgba(160, 174, 192, 0.7);
+}
+.font-size {
+  font-size: 14px;
+  font-weight: 400;
+}
+.opacity {
+  opacity: 1;
+}
+.opacity:hover {
+  opacity: 0.6;
+}
+.margin-bottom {
+  margin-bottom: 24px;
+}
+.label {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--secound-color);
+  border-radius: 8px;
+}
+.input::placeholder {
+  color: var(--secound-color);
+}
+.input:focus {
+  outline: none;
+  border-color: var(--main--color);
+  transition: 0.4s;
+}
+.paragraph-error {
+  font-size: 14px;
+  color: red;
+}
+.btn-active {
+  background-color: var(--main--color) !important;
+  color: white !important;
+  transition: all 0.4s;
+}
+.icon {
+  position: absolute;
+  right: 10px;
+  margin-top: 13px;
+}
+.login-with {
+  margin-top: 20px;
+  border-bottom: 1px solid var(--secound-color);
+}
+.login-with h6 {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 10px;
+  font-size: 12px;
+}
+.text-foot {
+  justify-content: center;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.reserved {
+  color: var(--secound-color);
+}
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.img-Created {
+  width: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+}
+/* start Page Step */
+.step {
+  background-color: var(--main--color);
+  width: 40px;
+  height: 20px;
+  border-radius: 4px;
+}
+.two {
+  background-color: rgba(241, 242, 244, 1);
+}
+.btn-fixed {
+  display: flex;
+  justify-content: center;
+  padding: 5px 35px;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+}
+.cancel {
+  border: 1px solid var(--main--color);
+  color: var(--main--color);
+}
+.confirm {
+  background-color: rgba(241, 242, 244, 1);
+  color: var(--secound-color);
+  font-weight: bold;
+}
+/* End Page Step */
+@media (max-width: 576px) {
+  .margin-bottom {
+    margin-bottom: 10px;
+  }
+  .paragraph-error {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .text-foot {
+    display: block;
+  }
+}
+.logo-clinic {
+  width: 100px;
+}
+.font-family {
+  font-family: "Manrope", sans-serif;
+}
