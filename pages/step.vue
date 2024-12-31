@@ -4,7 +4,7 @@
       <img src="public/logo3.jpg" alt="" />
     </div>
     <div class="row g-0">
-      <div class="col-lg-6 col-md-6 display">
+      <div class="col-lg-6 col-md-6 display-left-section">
         <div class="row g-0 justify-content-center align-items-center height">
           <div class="col-9">
             <StepsPage :isActive="activeStep" />
@@ -154,19 +154,8 @@ function ToClinic() {
 }
 </script>
 <style scoped>
-.logo-main {
-  height: 60px;
-  padding-left: 20px;
-  padding-top: 10px;
-}
-.logo-main img {
-  width: 100px;
-}
 .height {
   height: calc(100vh - 60px);
-}
-.color-box {
-  background-color: rgba(241, 242, 244, 1);
 }
 /* start mini box */
 .mini-box {

@@ -53,9 +53,9 @@ ul {
   border: 1px solid var(--secound-color);
   border-radius: 8px;
 }
-.input::placeholder {
+/* .input::placeholder {
   color: var(--secound-color);
-}
+} */
 .input:focus {
   outline: none;
   border-color: var(--main--color);
@@ -122,7 +122,7 @@ ul {
 .btn-fixed {
   display: flex;
   justify-content: center;
-  padding: 5px 35px;
+  padding: 5px 20px;
   background-color: transparent;
   border: none;
   border-radius: 6px;
@@ -144,10 +144,22 @@ ul {
   .paragraph-error {
     font-size: 12px;
   }
+  .display-mini {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .text-foot {
     display: block;
+  }
+  .display-mini {
+    display: none;
+  }
+  .color-box {
+    background-color: white;
+  }
+  .display-left-section {
+    display: none;
   }
 }
 .logo-clinic {
@@ -156,3 +168,41 @@ ul {
 .font-family {
   font-family: "Manrope", sans-serif;
 }
+.color-box {
+  background-color: rgba(241, 242, 244, 1);
+}
+.logo-main {
+  height: 60px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.logo-main img {
+  width: 100px;
+}
+/* start mini box */
+.height {
+  height: calc(100vh - 60px);
+}
+.mini-box {
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto;
+  background-color: white;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.box-border {
+  border-bottom: 1px solid var(--secound-color);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .display-mini {
+    display: none;
+  }
+  .steps-compnent {
+    display: none;
+  }
+}
+
+/* end mini box */

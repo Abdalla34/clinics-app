@@ -233,7 +233,6 @@ function remove(index) {
     display: none;
   }
   .box-setting {
-    right: auto;
     left: 0;
     bottom: -100vh;
     height: 50vh;

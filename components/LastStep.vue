@@ -10,7 +10,7 @@
 </template>
 <script setup>
 const props = defineProps({
-  isActive: Boolean,
   isActiveTwo: Boolean,
+  isActive: Boolean,
 });
 </script>
