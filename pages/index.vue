@@ -2,13 +2,9 @@
   <div class="parent-index overflow-hidden">
     <div class="row g-0">
       <div class="col-lg-6 col-md-6 col-sm-6 display-logo">
-        <div class="background position-relative padding-logo">
+        <div class="background position-relative padding-logo p-3">
           <div class="details-img position-absolute">
-            <img
-              class="img-logo"
-              src="@/public/logo2.png"
-              alt=""
-            />
+            <img class="img-logo" src="@/public/logo2.png" alt="" />
             <h2 class="text-light">Amazing Platform!</h2>
             <p class="parag-logo text-light pt-2">
               "عadaty helped me organize patient bookings for my clinic and
@@ -33,16 +29,18 @@
           class="row h-100 g-0 justify-content-center align-items-center md-align-items-center"
         >
           <div class="col-9">
-            <img-Eyadaty />
-            <TitleForms />
-            <FormLog />
+            <div class="img-phone-up text-center mb-3">
+              <img class="img-phone" src="public/logo3.jpg" alt="" />
+            </div>
+            <div class="title-login text-center mb-4">
+              <h4>Login first to your account</h4>
+            </div>
+            <FormLogin />
           </div>
-          <div>
-            <div class="text-foot text-center">
-              <div class="reserved">
-                <p class="font-size parg">© 2024 Eadaty . Alrights reserved.</p>
-              </div>
-              <p class="font-size parg">Terms & Conditions Privacy Policy</p>
+          <div class="footer font-12px text-center">
+            <p class="second-color-text">© 2024 Eadaty . Alrights reserved.</p>
+            <div>
+              <p>Terms & Conditions Privacy Policy</p>
             </div>
           </div>
         </div>
@@ -78,9 +76,6 @@ useHead({
 .details-img {
   bottom: 20%;
 }
-.padding-logo {
-  padding: 10px;
-}
 .img-logo {
   margin-bottom: 20px;
   width: 80px;
@@ -93,16 +88,5 @@ useHead({
 }
 .title-owner p {
   font-size: 12px;
-}
-.reserved {
-  color: var(--secound-color);
-}
-@media (max-width: 576px) {
-  .display-logo {
-    display: none;
-  }
-  .h-100vh {
-    height: 100vh;
-  }
 }
 </style>

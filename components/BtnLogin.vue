@@ -1,26 +1,19 @@
 <template>
-  <button class="btn-log text-capitalize">{{ btn }}</button>
+  <button class="input input-outline font-size mt-3 text-capitalize" @click="$emit('confirm')">
+    {{ btnLogin }}
+  </button>
 </template>
 <script setup>
-const btn = useState("Btn", () => "login");
+const btnLogin = useState("btnlog", () => "login");
 </script>
 <style scoped>
-.btn-log {
-  margin-top: 10px;
-  transition: ease-in-out all 0.2s;
-  color: var(--secound-color);
-  font-weight: 600;
-  border: none;
-  width: 100%;
-  padding: 8px;
-  border-radius: 8px;
-}
-.btn-log :focus {
+.input-outline {
   outline: none;
+  border: none;
+  color: white;
 }
-@media(max-width: 768px){
-  .btn-log{
-    margin-top: 15px;
-  }
+.input-outline:focus {
+  outline: none;
+  border: none;
 }
 </style>

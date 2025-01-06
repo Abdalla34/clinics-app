@@ -5,7 +5,7 @@
 }
 :root {
   --main--color: #27a376;
-  --secound-color: rgba(160, 174, 192, 0.4);
+  --second-color: rgba(160, 174, 192, 0.4);
 }
 h1,
 h2,
@@ -21,15 +21,32 @@ ul {
   list-style: none;
   padding: 0;
 }
-.color-main {
+.background-main {
+  background-color: #27a376;
+}
+.background-second {
+  background-color: rgba(241, 242, 244, 1);
+}
+.background-active {
+  background-color: #27a376;
+  color: white;
+}
+.color-main-text {
   color: #27a376;
 }
-.secound-color {
-  color: rgba(160, 174, 192, 0.7);
+.second-color-text {
+  color: rgba(160, 174, 192, 1);
 }
 .font-size {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: bold;
+}
+.font-12px {
+  font-size: 12px;
+  font-weight: 700;
+}
+.title {
+  font-size: 20px;
 }
 .opacity {
   opacity: 1;
@@ -37,172 +54,94 @@ ul {
 .opacity:hover {
   opacity: 0.6;
 }
-.margin-bottom {
-  margin-bottom: 24px;
+.is-valide {
+  border: 1px solid red !important;
+}
+.is-valide:focus {
+  outline: 1px solid red !important;
+}
+/* start Home */
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.img-phone {
+  width: 80px;
+  display: none;
+}
+.input {
+  border: none;
+  border: 1px solid var(--second-color);
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+}
+.input::placeholder {
+  color: var(--second-color);
+  font-weight: 600;
+  font-size: 12px;
+}
+.input:focus {
+  outline: 1px solid var(--main--color);
 }
 .label {
   display: block;
-  font-family: "Manrope", sans-serif;
+  font-weight: bold;
   font-size: 14px;
-  font-weight: 600;
-  text-transform: capitalize;
 }
-.input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid var(--secound-color);
-  border-radius: 8px;
-}
-/* .input::placeholder {
-  color: var(--secound-color);
-} */
-.input:focus {
-  outline: none;
-  border-color: var(--main--color);
-  transition: 0.4s;
-}
-.paragraph-error {
-  font-size: 14px;
-  color: red;
-}
-.btn-active {
-  background-color: var(--main--color) !important;
-  color: white !important;
-  transition: all 0.4s;
-}
-.icon {
+.icon-eye {
   position: absolute;
   right: 10px;
-  margin-top: 13px;
+  top: 47px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
-.login-with {
-  margin-top: 20px;
-  border-bottom: 1px solid var(--secound-color);
-}
-.login-with h6 {
-  background-color: white;
-  position: absolute;
+/* end Home */
+/* start Password forget and Update */
+.fix-position {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 0px 10px;
-  font-size: 12px;
+  width: 600px;
 }
-.text-foot {
-  justify-content: center;
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-}
-.reserved {
-  color: var(--secound-color);
-}
-.title {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.img-Created {
-  width: 100px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 12px;
-}
-/* start Page Step */
-.step {
-  background-color: var(--main--color);
-  width: 40px;
-  height: 20px;
-  border-radius: 4px;
-}
-.two {
-  background-color: rgba(241, 242, 244, 1);
-}
-.btn-fixed {
-  display: flex;
-  justify-content: center;
-  padding: 5px 20px;
-  background-color: transparent;
-  border: none;
-  border-radius: 6px;
-}
-.cancel {
-  border: 1px solid var(--main--color);
-  color: var(--main--color);
-}
-.confirm {
-  background-color: rgba(241, 242, 244, 1);
-  color: var(--secound-color);
-  font-weight: bold;
-}
-/* End Page Step */
+/* end Password forget and Update */
+/* start responsev */
 @media (max-width: 576px) {
-  .margin-bottom {
-    margin-bottom: 10px;
-  }
-  .paragraph-error {
-    font-size: 12px;
-  }
-  .display-mini {
+  /* start home */
+  .display-logo {
     display: none;
   }
+  .img-phone {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+  }
+  .title-login h4 {
+    font-size: 20px;
+  }
+  .footer {
+    display: block;
+    position: relative;
+    bottom: -20%;
+  }
+  /* end home */
+  /* start Password forget and Update */
+  .fix-position {
+    width: 90%;
+  }
+  .fix-position .col-9 {
+    width: 100%;
+  }
+  /* end Password forget and Update */
 }
 @media (max-width: 768px) {
-  .text-foot {
+  /* start home */
+  .footer {
     display: block;
+    position: relative;
   }
-  .display-mini {
-    display: none;
-  }
-  .color-box {
-    background-color: white;
-  }
-  .display-left-section {
-    display: none;
-  }
+  /* end Home */
 }
-.logo-clinic {
-  width: 100px;
-}
-.font-family {
-  font-family: "Manrope", sans-serif;
-}
-.color-box {
-  background-color: rgba(241, 242, 244, 1);
-}
-.logo-main {
-  height: 60px;
-  padding-left: 20px;
-  padding-top: 10px;
-}
-.logo-main img {
-  width: 100px;
-}
-/* start mini box */
-.height {
-  height: calc(100vh - 60px);
-}
-.mini-box {
-  max-height: 100%;
-  max-width: 100%;
-  overflow: auto;
-  background-color: white;
-  padding: 16px;
-  box-sizing: border-box;
-}
-.box-border {
-  border-bottom: 1px solid var(--secound-color);
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .display-mini {
-    display: none;
-  }
-  .steps-compnent {
-    display: none;
-  }
-}
-
-/* end mini box */
+/* end responsev */
