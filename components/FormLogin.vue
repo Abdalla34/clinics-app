@@ -127,7 +127,7 @@
         >
         <input
           class="input"
-          :class="{ 'is-valide': errors.email }"
+          :class="{ 'is-valide': errors.email || registered }"
           type="email"
           placeholder="input your registered email"
           v-model="email"
@@ -136,7 +136,7 @@
           {{ errors.email }}
         </p>
         <p v-if="registered" class="text-capitalize text-danger font-12px">
-          this email not regestred
+          this email not registered
         </p>
       </div>
       <div class="Pass position-relative">
@@ -154,7 +154,7 @@
           {{ errors.password }}
         </p>
         <p v-if="passNotDone" class="text-capitalize text-danger font-12px">
-          this passowrd not done
+          this passowrd not true
         </p>
         <i
           @click="toogleIcon"
@@ -275,6 +275,7 @@ const onSubmit = handleSubmit((values) => {
       } else {
         passNotDone.value = true;
       }
+      registered.value = false;
     } else {
       registered.value = true;
     }

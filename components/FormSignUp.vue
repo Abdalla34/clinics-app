@@ -20,7 +20,7 @@
         >
         <input
           class="input"
-          :class="{ 'is-valide': errors.email }"
+          :class="{ 'is-valide': errors.email || emailHere}"
           type="email"
           placeholder="input your registered email"
           v-model="email"

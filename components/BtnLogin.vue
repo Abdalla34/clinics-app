@@ -10,7 +10,7 @@ const btnLogin = useState("btnlog", () => "login");
 .input-outline {
   outline: none;
   border: none;
-  color: white;
+  color: rgba(160, 174, 192, 1);
 }
 .input-outline:focus {
   outline: none;
