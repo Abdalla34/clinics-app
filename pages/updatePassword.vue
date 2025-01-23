@@ -25,11 +25,11 @@
             <ul v-if="password">
               <li
                 class="font-12px"
-                v-for="(list, index) in listsCondition"
+                v-for="(errors, index) in listsCondition"
                 :key="index"
-                :class="list.boolean ? 'green' : 'red'"
+                :class="errors.boolean ? 'green' : 'red'"
               >
-                {{ list.message }}
+                {{ errors.message }}
               </li>
             </ul>
             <i

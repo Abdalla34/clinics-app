@@ -20,7 +20,7 @@
         >
         <input
           class="input"
-          :class="{ 'is-valide': errors.email || emailHere}"
+          :class="{ 'is-valide': errors.email || emailHere }"
           type="email"
           placeholder="input your registered email"
           v-model="email"
@@ -123,8 +123,8 @@ import { useForm, useField } from "vee-validate";
 import * as yup from "yup";
 const btnLogin = useState("btnlog", () => "");
 btnLogin.value = "create account";
+
 const emailHere = ref(false);
-// const { state: showPass, toggle: toogleIconShow } = useToggle();
 const { state: showPass, toogle: toogleIcon } = useToogle();
 const schema = yup.object({
   email: yup
@@ -150,9 +150,11 @@ const { value: name } = useField("name");
 const onSubmit = handleSubmit((values) => {
   if (values.email && values.password.length >= 8 && values.name) {
     const accounts = JSON.parse(localStorage.getItem("account")) || [];
+
     const emailAlreadyHere = accounts.find(
       (item) => item.email === values.email
     );
+
     if (emailAlreadyHere) {
       emailHere.value = true;
     } else {
@@ -164,6 +166,7 @@ const onSubmit = handleSubmit((values) => {
       emailHere.value = false;
       accounts.push(newAccount);
       localStorage.setItem("account", JSON.stringify(accounts));
+      // navigateTo("/stepOne");
       resetForm();
     }
   }

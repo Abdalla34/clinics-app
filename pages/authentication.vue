@@ -15,7 +15,7 @@
               placeholder=""
               maxlength="1"
               v-model="inputsCode[index]"
-              class="input input-4 text-center handDom"
+              class="input input-width text-center handDom"
               @input="nextToElm(index)"
               @keydown.backspace="prevElm(index)"
             />
@@ -26,7 +26,7 @@
           >
             Code Not True
           </p>
-          <BtnLogin />
+          <BtnLogin class="background-main" />
         </form>
       </div>
     </div>
@@ -38,23 +38,30 @@ const title = useState("title", () => "");
 title.value = "OTP Verification";
 const parag = useState("parag", () => "");
 parag.value = "We have sent a verification code to email address ";
-const emailLogin = ref();
-const active = ref(false);
 const btnLogin = useState("btnlog", () => "");
+const emailLogin = ref(JSON.parse(localStorage.getItem("emailLog")));
 btnLogin.value = "submit";
 const inputsCode = ref(["", "", "", ""]);
 const showError = ref(false);
-const codeNum = ref(1234);
+const codeNum = ref("1234");
 const isErrorCode = computed(() => {
   const numbersCode = inputsCode.value.join("");
   return numbersCode === codeNum.value.toString();
 });
 const onSubmit = () => {
-  if (inputsCode.value.join("") === codeNum.value.toString()) {
-    console.log("Equal codeNum");
+  if (inputsCode.value.join("") === codeNum.value) {
+    navigateTo("/successfully");
     showError.value = false;
+    const emailTestPass = JSON.parse(localStorage.getItem("emailLog"));
+    const acc = JSON.parse(localStorage.getItem("account"));
+    const findeEamil = acc.find((item) => item.email === emailTestPass);
+    if (findeEamil) {
+      // console.log("yes email here");
+      // console.log(emailTestPass);
+      findeEamil.Pass = JSON.parse(localStorage.getItem("newPass"));
+      localStorage.setItem("account", JSON.stringify(acc));
+    }
   } else {
-    console.log("Not Equal codeNum");
     showError.value = true;
   }
 };
@@ -74,25 +81,16 @@ function prevElm(currentindex) {
     }
   }
 }
-onMounted(() => {
-  emailLogin.value = JSON.parse(localStorage.getItem("emailLog"));
-});
-watch(inputsCode, () => {
-  if (inputsCode.value.join("") !== "") {
-    showError.value = true;
-  }
-});
 </script>
-
 <style scoped>
-.input-4 {
+.input-width {
   width: 50px;
 }
 .green {
   color: green;
 }
 @media (max-width: 576px) {
-  .input-4 {
+  .input-width {
     width: 50px;
   }
 }

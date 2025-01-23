@@ -23,6 +23,7 @@ ul {
 }
 .background-main {
   background-color: #27a376;
+  color: white !important;
 }
 .background-second {
   background-color: rgba(241, 242, 244, 1);
@@ -47,6 +48,7 @@ ul {
 }
 .title {
   font-size: 20px;
+  font-weight: 600;
 }
 .opacity {
   opacity: 1;
