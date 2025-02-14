@@ -22,11 +22,11 @@ ul {
   padding: 0;
 }
 .background-main {
-  background-color: #27a376;
+  background-color: #27a376 !important;
   color: white !important;
 }
 .background-second {
-  background-color: rgba(241, 242, 244, 1);
+  background-color: rgba(247, 247, 247, 1);
 }
 .background-active {
   background-color: #27a376;
@@ -147,3 +147,39 @@ ul {
   /* end Home */
 }
 /* end responsev */
+/* start steps */
+.height-img {
+  height: 60px;
+  border-bottom: 1px solid var(--second-color);
+  width: 50%;
+}
+.img-logo {
+  width: 80px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.height-100vh {
+  height: calc(100vh - 60px);
+}
+.mini-box {
+  background-color: white;
+  border-radius: 8px;
+}
+.phone-block {
+  display: none;
+}
+.word-space {
+  word-spacing: -2px;
+}
+@media (max-width: 768px) {
+  .height-img {
+    width: 100%;
+  }
+  .desctop-show {
+    display: none;
+  }
+  .phone-block {
+    display: block;
+  }
+}
+/* end steps */
