@@ -6,6 +6,7 @@
 :root {
   --main--color: #27a376;
   --second-color: rgba(160, 174, 192, 0.4);
+  --second-color-background:  rgba(247, 247, 247, 1);
 }
 h1,
 h2,
